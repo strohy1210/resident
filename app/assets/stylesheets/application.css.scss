@@ -1,0 +1,92 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import 'bootstrap';
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web);
+
+body { 
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  background-color: #f8f8f8;
+  padding-top: 70px;
+  background-image: linear-gradient(to bottom, white 0%, #f8f8f8 100%);
+  background: url("http://images.wisegeek.com/doctor-with-white-disposable-gloves.jpg") no-repeat center center fixed;
+  background-size: cover;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
+ }
+
+.container {
+  background-image: linear-gradient(to bottom, white 0%, #f8f8f8 100%);
+  border-radius: 20px;
+
+}
+
+.navbar-default {
+    .navbar-brand {
+    font-family: garamond, serif;
+    font-size: 30px;
+    background: rgb(10, 78, 178);
+    color: #fec30d;
+
+  }
+}
+
+.navbar, .navbar .container {
+  background: rgb(10, 78, 178);
+  border-color: transparent;
+}
+
+.content {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.page-header {
+  border-bottom: 0px;
+  background: rgba(0,0,0,0.35);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 15px;
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+  text-shadow: 1px 1px 5px #333;
+  margin-bottom: 200px;
+}
+
+.main-content {
+  background-image: linear-gradient(to bottom, white 0%, #f8f8f8 100%);
+  padding: 200px;
+}
+
+li a {
+  color: rgb(254, 195, 13);
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+  color: #5e5e5e;
+  background-color: transparent;
+}
