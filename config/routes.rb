@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'faq', to: 'welcome#faq'
   get 'brokers', to: 'welcome#brokers'
+  get 'implementation', to: 'welcome#implementation'
+  get 'privacy', to: 'welcome#privacy'
+  get 'terms', to: 'welcome#terms'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

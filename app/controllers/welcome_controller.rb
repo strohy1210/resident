@@ -9,4 +9,16 @@ class WelcomeController < ApplicationController
   def brokers
 
   end
+
+  def implementation
+
+  end
+
+  def privacy
+
+  end
+  
+  def terms
+
+  end
 end
