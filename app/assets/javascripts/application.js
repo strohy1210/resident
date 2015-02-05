@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require_tree .
+$(function(){
+
+  $(".faq-text-container").hide();
+  $(".faq-title-container").click(function(){
+    // debugger;
+     $(this).find(".faq-text-container").slideToggle();
+  });
+
+})

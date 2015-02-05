@@ -25,6 +25,7 @@ body {
   background-image: linear-gradient(to bottom, white 0%, #f8f8f8 100%);
   background: url("http://images.wisegeek.com/doctor-with-white-disposable-gloves.jpg") no-repeat center center fixed;
   background-size: cover;
+  font-family: 'Titillium Web', sans-serif;
 
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -67,19 +68,19 @@ body {
 
 .page-header {
   border-bottom: 0px;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0,0,0,0.43);
   padding-top: 15px;
   padding-bottom: 15px;
   border-radius: 15px;
   color: white;
   font-family: 'Titillium Web', sans-serif;
   text-shadow: 1px 1px 5px #333;
-  margin-bottom: 200px;
+  margin-bottom: 150px;
 }
 
 .main-content {
-  background-image: linear-gradient(to bottom, white 0%, #f8f8f8 100%);
-  padding: 200px;
+  background-image: linear-gradient(to bottom, #fafafa 0%, #f8f8f8 100%);
+  padding: 50px;
 }
 
 li a {
@@ -89,4 +90,65 @@ li a {
 .nav > li > a:hover, .nav > li > a:focus {
   color: #5e5e5e;
   background-color: transparent;
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+}
+
+.footer, .push {
+  height: 155px; /* .push must be the same height as .footer */
+}
+
+.item {
+  border: 10px transparent #ccc;
+  padding: 10px;
+  border-radius: 30px;
+  background-image: linear-gradient(to bottom, #fafafa 0%, #f8f8f8 100%);
+  border-bottom: 1px solid #ccc;
+  width: 30%;
+  height: 270px;
+  margin: 1.5%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+ }
+
+
+.faq-title-container {
+  background-color: #f4f4f4;
+  overflow: hidden;
+  padding: 5px 14px;
+  margin: 0 0 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.faq-title {
+  font-size: 18px;
+  color: #000;
+  text-align: left;
+  font-weight: normal;
+
+}
+
+.faq-text-container {
+  padding: 15px;
+  margin: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.faq-text {
+  font-size: 16px;
+  color: #000;
+  text-align: left;
+  margin: 0 0 20px;
+
 }

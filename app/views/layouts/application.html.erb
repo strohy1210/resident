@@ -6,7 +6,7 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="wrapper">
 
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container" id="bar">
@@ -14,14 +14,16 @@
 
 
       <ul class="nav navbar-nav">
-              <div class="navbar-header hidden-xs">
+      <div class="navbar-header hidden-xs">
         <li><%= link_to "Q", root_path, class: 'navbar-brand hidden-xs' %></li>
       </div>
-        <li></li>
+        
         <li></li>
       </ul>
-      <ul class="nav navbar-right">
+      <ul class="nav navbar-nav navbar-right">
+        <li><%=link_to "Broker Info", brokers_path %></li>
         <li><%=link_to "FAQ", faq_path %></li>
+ 
 
       </ul>
     </div>
@@ -29,6 +31,10 @@
 
 
 <%= yield %>
-
+<br><br>
+    <div class="footer">
+       <p>Privacy Policy | Terms & Conditions</p>
+    </div>
+  </div>
 </body>
 </html>

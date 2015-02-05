@@ -5,4 +5,8 @@ class WelcomeController < ApplicationController
   def faq
 
   end
+
+  def brokers
+
+  end
 end
