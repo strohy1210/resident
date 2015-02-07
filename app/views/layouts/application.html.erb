@@ -11,37 +11,82 @@
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container" id="bar">
 
-
-
       <ul class="nav navbar-nav">
         <div class="navbar-header hidden-xs">
-        <li><%= link_to "Q", root_path, class: 'navbar-brand hidden-xs' %></li>
+        <li><%= link_to "Q", "#", class: 'navbar-brand hidden-xs' %></li>
         </div>
+
         <li class="dropdown">
           <a id="drop1" href="/implementation" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">About<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="/">Home</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="implementation">Implementation</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Something else here</a></li>
+            <li><%=link_to "Our Questions", '#quiz_qs' %></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#implementation">Implementation</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#reporting">Reporting</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#brokers">Broker Info</a></li>
             <li role="presentation" class="divider"></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Separated link</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target="#contactModal" >
+        <div class="hover-mask bottom-mask mask-orange">Contact Us</div></a></li>
           </ul>
         </li>
+        <li><%=link_to "Our Team", "#team" %></li>
+
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><%=link_to "Broker Info", brokers_path %></li>
-        <li><%=link_to "FAQ", faq_path %></li>
- 
-
+        <li><%=link_to "Demo", "#" %></li>
+        <li><a href="#" data-toggle="modal" data-target="#contactModal" >
+        <div class="hover-mask bottom-mask mask-orange">
+         <strong> Learn More</strong>
+        </div>
+        </a></li>
+        <li><%=link_to "FAQ", '#faq' %></li>
       </ul>
     </div>
   </div>
 
 
 <%= yield %>
+<!-- /////////////// MODAL //////////////////////////////////// -->
+
+
+  <div class="message-form">
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Contact Us to Learn More</h4>
+              </div>
+              <div class="modal-body">
+               <div class="form-group">
+           <%= form_tag(contact_us_url, method: "post") do %>
+            <%= label_tag :name %>
+           <%= text_field_tag(:name, "", class: 'form-control', rows: 4, placeholder: "Jane Doe", required: true)%>
+            <%= label_tag :email %>
+           <%= email_field_tag(:email, "", class: 'form-control', placeholder: "youremail@email.com", required: true) %>
+           <%= label_tag :company, "Company (optional)" %>
+           <%= text_field_tag(:company, "", class: 'form-control', rows: 4, placeholder: "Google", required: false)%>
+           <%= label_tag :phone, "Phone (optional)" %>
+           <%= text_field_tag(:phone, "", class: 'form-control', rows: 4, placeholder: "555-867-5309", required: false)%>
+                </div>
+              </div>
+
+              <div class="modal-footer">
+
+
+                <%= submit_tag "Send", class: 'btn btn-info' %>
+              </div>
+            <%end%>
+            </div>
+          </div>
+        </div>   
+      </div>
+
+<!--///////////  END MODAL /////////////////////// -->
 <br><br>
     <div class="footer">
       <p><%=link_to "Privacy Policy", privacy_path%> | <%=link_to "Terms & Conditions", terms_path%> </p>
+      Copyright 2014, Quizzify LLC
     </div>
   </div>
 </body>

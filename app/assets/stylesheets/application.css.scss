@@ -21,8 +21,8 @@ body {
   font-family: 'Karla', sans-serif;
   font-size: 16px;
   background-color: #f8f8f8;
-  padding-top: 70px;
-  background-image: linear-gradient(to bottom, white 0%, #f8f8f8 100%);
+  padding-top: 100px;
+  background-image: linear-gradient(to bottom, rgb(126, 171, 230) 0%, #f8f8f8 100%);
   background: url("http://images.wisegeek.com/doctor-with-white-disposable-gloves.jpg") no-repeat center center fixed;
   background-size: cover;
   font-family: 'Titillium Web', sans-serif;
@@ -39,9 +39,9 @@ body {
  }
 
 .container-fluid, .container {
-  background-image: linear-gradient(to bottom, #eee 0%, #f8f8f8 100%);
-  border-radius: 20px;
-
+  background-image: linear-gradient(to bottom, #eee 0%, rgb(126, 171, 230) 100%);
+  border-radius: 10px;
+  margin-top: 15px;
 }
 
 .navbar-default {
@@ -117,9 +117,15 @@ li a {
   box-sizing: border-box;
  }
 
+ .item .vcenter {
+
+  vertical-align: middle;
+  float: none;
+ }
+
 
 .faq-title-container {
-  background-color: #f4f4f4;
+  background-color: #eee;
   overflow: hidden;
   padding: 5px 14px;
   margin: 0 0 10px;
@@ -127,6 +133,7 @@ li a {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .faq-title {
@@ -135,6 +142,10 @@ li a {
   text-align: left;
   font-weight: normal;
 
+}
+
+.faq-title:hover {
+color: #5e5e5e;
 }
 
 .faq-text-container {
@@ -154,6 +165,28 @@ li a {
 .navbar-default .navbar-nav > li > a {
   color: #fec30d;
 }
+
 .footer {
   font-size: 12px;
+}
+
+.mission {
+  color: #0a4eb2;
+}
+
+.footer {
+  border-top: 1px solid #ccc;
+}
+
+.glyphicon {
+  cursor: pointer;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #BFBBAA;
+}
+
+table td, table th, table {
+  border: 2px solid #ccc;
+  padding: 10px;
+  border-radius: 20px;
 }
