@@ -1,0 +1,47 @@
+
+    <div class="modal fade" id="demoModal" tabindex="-1" role="dialog" aria-labelledby="contactModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="navbar navbar-default navbar-fixed-top">
+                    <ul class="nav navbar-nav">
+                     <li style="color: white;">General Health<li>
+                    </ul>
+                </div>
+              </div>
+              <div class="modal-body">
+               <div class="form-group">
+                <%= form_tag(answer_path, method: "post", remote: true) do %>
+                <div class="question">
+
+                Picking a cereal for your kids (or even yourself - your secret's safe with us...even if you're using your work email), your best bet to avoid the ones with the most sugar is to ...?
+                <br><em>(Pick the 1st of 2 answers)</em>
+                </div>
+                <div class="answer answer-right">
+                <%= radio_button_tag(:ans, "sugar") %>
+                Read the ingredients to see if sugar is first on the label, since ingredients must be listed in order of volume.
+                </div>
+                <div class="answer answer-wrong">
+                <%= radio_button_tag(:ans, "store") %>
+                Go to Whole Foods or some other overpriced crunchy 'green' yuppie-type store and pick one that says: 'no added sugar.'
+                </div>
+                <div class="answer answer-right">
+                <%= radio_button_tag(:ans, "fiber") %>
+                Pick one that is high in fiber.
+                </div>
+                <div class="answer answer-wrong">
+                <%= radio_button_tag(:ans, "mascot") %>
+                Pick one endorsed by a leprechaun, seafarer, toucan, tiger or silly rabbit.
+                </div>
+                <%end%>
+
+              </div>
+          
+              <div class="modal-footer">
+                <%=link_to "Quizzify Home", root_path, class: "pull-left" %>
+
+                <%=link_to "Next", "#" %>
+              </div>
+            </div>
+        </div>
+      </div>

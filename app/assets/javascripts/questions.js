@@ -1,0 +1,5 @@
+$(function(){
+  
+  $('#demoModal').modal('show');
+
+})

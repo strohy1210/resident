@@ -17,19 +17,16 @@
 $(function(){
 
   $(".faq-text-container").hide();
+
   $(".faq-title-container").click(function(){
-    // debugger;
      $(this).find(".faq-text-container").slideToggle();
   });
 
   $(".faq-title-container").mouseleave(function(){
-    // debugger;
      $(this).find(".faq-text-container").slideUp();
   });
 
   $(".more").hide();
-
-var sections = [".quiz-qs", ".about", ".reporting", ".implementation", ".brokers"];
 
   $(".section").click(function(){
      $(this).find(".more").slideToggle();
