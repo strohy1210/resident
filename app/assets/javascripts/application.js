@@ -25,6 +25,9 @@ $(function(){
   $(".faq-title-container").mouseleave(function(){
      $(this).find(".faq-text-container").slideUp();
   });
+  $(".faq-title-container").mouseenter(function(){
+     $(this).find(".faq-text-container").slideDown();
+  });
 
   $(".more").hide();
 
