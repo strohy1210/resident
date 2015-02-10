@@ -4,8 +4,11 @@ class QuestionsController < ApplicationController
     render :layout => 'demo'
   end
 
-  def answer
+  def demo_too
+    render :layout => 'demo'
+  end
 
+  def answer
     @answer = params[:ans]
   end
 end

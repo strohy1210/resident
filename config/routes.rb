@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'reporting', to: 'welcome#reporting'
   post :contact_us, to: 'welcome#contact_us', as: :contact_us
   post :answer, to: 'questions#answer'
+  get :demo_too, to: 'questions#demo_too'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

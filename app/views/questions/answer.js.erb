@@ -1,1 +1,54 @@
-$('#demoModal').modal('hide');
+var explanation = $(".explanation");
+var answer = '.<%=@answer%>';
+$(explanation).text("")
+<% if @answer == "sugar" || @answer=="fiber" %>
+  $(answer).addClass("answer-right");
+  <% if @answer == "sugar" %>
+  $(explanation).append("CORRECT, sort of. (Since this is the first question we're grading generously.) While it is technically correct that every cereal listing sugar first is mostly sugar, that information isn't helpful:  most cereal companies simply use smaller quantities of many sugary sweeteners so that none of them show up first in the ingredients list. Examples: corn syrup, malt syrup, honey, agave.")
+  $(explanation).addClass("bg-explain");
+  <% else %>
+  $(explanation).append("CORRECT. If serving sizes are equal (and there is no universal serving size, so be careful not to eat too much), the more fiber there is the cereal, the less sugar there is. So high-fiber cereals will probably have less sugar in the same size serving than other cereals.  Plus, fiber helps maintain 'regularity.' ")
+  $(explanation).addClass("bg-explain");
+  <%end%>
+  if ($('.answer-right').length ===2){
+    $('.next-q').text("")
+    $('.next-q').append('<%= link_to "Great! Next Question", demo_too_path%>')
+  }
+  else if ($('.answer-right').length ===1){
+    $('.next-q').text("")
+    $('.next-q').append('One more correct answer to go!')
+
+  }
+
+<%end%>
+
+<% if @answer == "store" || @answer=="mascot" %>
+  $(answer).addClass("answer-wrong");
+  <% if @answer == "store" %>
+  $(explanation).append("INCORRECT. In general it is not a good idea to take nutritional advice from a cartoon character, even one who insists his cereal is grrrrrreat!")
+  $(explanation).addClass("bg-explain");
+  <% else %>
+  $(explanation).append("INCORRECT. Those cereals are often sweetened with honey, agave or something else that is also a sugar, albeit a sugar with a college education. So you still have to read the label. And those 'two scoops' of dried raisins? Full of naturally occurring sugar that won't show up in the ingredients.")
+  $(explanation).addClass("bg-explain");
+  <%end%> 
+
+<%end%>
+
+
+<% if @answer == "network" %>
+  $(answer).addClass("answer-right");
+  $(explanation).append("CORRECT. As soon as there is one, we will change this answer. Your PCP should be able to find you an in-network specialist affiliated with an in-network hospital who has specific experience in your condition or (in the case of, for example, orthopedists) body part.");
+  $(explanation).addClass("bg-explain");
+<%elsif @answer == "chair" %>
+  $(answer).addClass("answer-wrong");
+  $(explanation).append("INCORRECT. It is possible this could be true, but department chairs have many responsibilities other than seeing patients. They are often not selected for the position, because they have the best clinical skills. Further, many are 'consultants' to drug companies, which may bias them towards certain drugs.  And the reason it takes forever to get an appointment is often because seeing patients is not a priority for them.");
+  $(explanation).addClass("bg-explain");
+  <% elsif @answer == "mag" %>
+    $(answer).addClass("answer-wrong");
+  $(explanation).append("INCORRECT. This is possibly true but far from a sure bet. The local doctor ratings are done by peers and may be OK. However, there can be a lot of politics and the ratings method favors doctors with good networking skills. So a doctor like House would probably not make the 'best' list, having made too many enemies.")
+  $(explanation).addClass("bg-explain");
+  <% elsif @answer == "ratings" %>
+    $(answer).addClass("answer-wrong");
+  $(explanation).append("INCORRECT. Two reasons. First, there usually are not enough ratings on specialists. You may miss a good one who is younger and more up to date, just because their practice is new and they don’t have enough ratings. Second, patients tend to rate what they see – good interpersonal skills, on-time performance, even pleasant waiting rooms. These are important attributes but may not correlate with the 'best' doctor.INCORRECT. This is possibly true but far from a sure bet. The local doctor ratings are done by peers and may be OK. However, there can be a lot of politics and the ratings method favors doctors with good networking skills. So a doctor like House would probably not make the 'best' list, having made too many enemies.")
+  $(explanation).addClass("bg-explain");
+<%end%>

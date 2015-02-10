@@ -8,41 +8,6 @@
 </head>
 <body class="wrapper">
 
-  <div class="navbar navbar-default navbar-fixed-top">
-    <div class="container" id="bar">
-
-      <ul class="nav navbar-nav">
-        <div class="navbar-header hidden-xs">
-        <li><%= link_to "Q", root_path, class: 'navbar-brand hidden-xs' %></li>
-        </div>
-
-        <li class="dropdown">
-          <a id="drop1" href="/implementation" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">About<span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Home</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#about">Our Value</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#integration">Logistics</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#brokers">Broker Info</a></li>
-            <li role="presentation" class="divider"></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target="#contactModal" >
-        <div class="hover-mask bottom-mask mask-orange">Contact Us</div></a></li>
-          </ul>
-        </li>
-        <li><%=link_to "Our Team", "#team" %></li>
-
-
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%=link_to "Demo", demo_path%></li>
-        <li><a href="#" data-toggle="modal" data-target="#contactModal" >
-        <div class="hover-mask bottom-mask mask-orange">
-         <strong> Learn More</strong>
-        </div>
-        </a></li>
-        <li><%=link_to "FAQ", '#faq' %></li>
-      </ul>
-    </div>
-  </div>
 
 
 <%= yield %>
