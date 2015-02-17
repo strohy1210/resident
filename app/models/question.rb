@@ -1,14 +1,5 @@
 class Question
 
-  def correct
-
-
-  end
-
-
-  def wrong
-
-
-  end
+#for scaling with database
 
 end

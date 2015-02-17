@@ -1,52 +1,46 @@
-
-    <div class="modal fade" id="demoModal" tabindex="-1" role="dialog" aria-labelledby="contactModal" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <div class="navbar navbar-default navbar-fixed-top">
-                    <ul class="nav navbar-nav">
-                     <li style="color: white;">General Health<li>
-                    </ul>
-                </div>
-              </div>
-              <div class="modal-body">
-               <div class="form-group">
-                <%= form_tag(answer_path, method: "post", remote: true) do %>
-              
-                <div class="question">
-
-                 The best trick to finding the best medical specialist is to...?<br><em>(Pick 1 correct answer)</em>
-                  </div>
-                <div class="answers">
-                  <div class="answer chair">
-                  <%= radio_button_tag(:ans, "chair") %>
-                  Make an appointment with the specialist who is chair of the relevant department at a major academic medical center, even if the next available slot is two months from now.
-                  </div>
-                  <div class="answer network">
-                  <%= radio_button_tag(:ans, "network") %>
-                  Just go with one in your network; there is really no good way of finding the best specialist.
-                  </div>
-                  <div class="answer mag">
-                  <%= radio_button_tag(:ans, "mag") %>
-                  Use one rated in your local magazine when they do their 'Best Doctors' issue.
-                  </div>
-                  <div class="answer ratings">
-                  <%= radio_button_tag(:ans, "ratings") %>
-                  Find patient ratings online.
-                  </div>
-                </div>
-                <%end%>      
-              </div>
-              <div class="modal-footer">
-              
-                  <p class="text-left explanation">
-
-                  </p>
-               
-                <%=link_to "Quizzify Home", root_path, class: "pull-left" %>
-
-                <%=link_to "Back", demo_path %>
-              </div>
-            </div>
+<div class="modal fade" id="demoModal" tabindex="-1" role="dialog" aria-labelledby="contactModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="navbar navbar-default navbar-fixed-top">
+            <ul class="nav navbar-nav">
+              <li style="color: white;">General Health<li>
+            </ul>
         </div>
       </div>
+      <div class="modal-body">
+       <div class="form-group">
+        <%= form_tag(answer_path, method: "post", remote: true) do %>      
+        <div class="question">
+         The best trick to finding the best medical specialist is to...?<br><em>(Pick 1 correct answer)</em>
+        </div>
+        <div class="answers">
+          <div class="answer chair">
+          <%= radio_button_tag(:answer, "chair") %>
+          Make an appointment with the specialist who is chair of the relevant department at a major academic medical center, even if the next available slot is two months from now.
+          </div>
+          <div class="answer network">
+          <%= radio_button_tag(:answer, "network") %>
+          Just go with one in your network; there is really no good way of finding the best specialist.
+          </div>
+          <div class="answer mag">
+          <%= radio_button_tag(:answer, "mag") %>
+          Use one rated in your local magazine when they do their 'Best Doctors' issue.
+          </div>
+          <div class="answer ratings">
+          <%= radio_button_tag(:answer, "ratings") %>
+          Find patient ratings online.
+          </div>
+        </div>
+        <%end%>      
+      </div>
+      <div class="modal-footer">
+        <p class="text-left explanation">
+          <!--Explanation appended here -->
+        </p>
+        <%=link_to "Quizzify Home", root_path, class: "pull-left" %>
+        <%=link_to "Back", demo_path %>
+      </div>
+    </div>
+  </div>
+</div>
